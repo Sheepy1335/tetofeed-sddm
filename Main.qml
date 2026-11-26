@@ -4,9 +4,12 @@
  * a rolling tracking band and the odd tape tear; a VCR on-screen display; a
  * blood-black glass panel with a crimson glow seam. All motion is image swaps and
  * transforms, cheap on the UHD 620.
+<<<<<<< HEAD
 
  After changing something in /Tetofeed/sddm, run: sudo bash /<dir location>/Tetofeed/install.sh
 
+=======
+>>>>>>> origin/main
  */
 
 import QtQuick
