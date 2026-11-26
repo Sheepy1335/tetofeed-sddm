@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
 # Tetofeed — SDDM Login — install
-=======
-# Tetofeed — SDDM Login — install.  ./install.sh
->>>>>>> origin/main
 set -euo pipefail
 HERE=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 DST=/usr/share/sddm/themes/tetofeed
