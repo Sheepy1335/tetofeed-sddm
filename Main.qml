@@ -4,12 +4,9 @@
  * a rolling tracking band and the odd tape tear; a VCR on-screen display; a
  * blood-black glass panel with a crimson glow seam. All motion is image swaps and
  * transforms, cheap on the UHD 620.
-<<<<<<< HEAD
-
- After changing something in /Tetofeed/sddm, run: sudo bash /<dir location>/Tetofeed/install.sh
-
-=======
->>>>>>> origin/main
+ *
+ * After changing something in /Tetofeed/sddm, run: sudo bash /<dir location>/Tetofeed/install.sh
+ *
  */
 
 import QtQuick
@@ -71,22 +68,22 @@ Item {
             Component.onCompleted: {
                 var a = root.sessionNames.slice()
                 while (a.length <= index) a.push("")
-                a[index] = model.name; root.sessionNames = a
+                    a[index] = model.name; root.sessionNames = a
             }
         }
     }
 
     function cycleSession(d) {
         if (sessionNames.length === 0) return
-        sessionIdx = (sessionIdx + d + sessionNames.length) % sessionNames.length
+            sessionIdx = (sessionIdx + d + sessionNames.length) % sessionNames.length
     }
 
     function doLogin() {
         if (loginPending) return
-        if (nameField.text.length === 0) { nameField.forceActiveFocus(); return }
-        if (passField.text.length === 0) { passField.forceActiveFocus(); return }
-        loginPending = true; errorMsg = ""
-        sddm.login(nameField.text, passField.text, sessionIdx)
+            if (nameField.text.length === 0) { nameField.forceActiveFocus(); return }
+            if (passField.text.length === 0) { passField.forceActiveFocus(); return }
+            loginPending = true; errorMsg = ""
+            sddm.login(nameField.text, passField.text, sessionIdx)
     }
 
     function pad(n) { return n < 10 ? "0" + n : "" + n }
@@ -244,21 +241,21 @@ Item {
             }
         }
         Osd { anchors.top: mode.bottom; anchors.topMargin: 6 * root.u; size: 22; bold: false; ink: root.cText
-              text: (config.channel || "CH 0401") + "   SP" }
+            text: (config.channel || "CH 0401") + "   SP" }
 
-        Column {
-            anchors.right: parent.right
-            spacing: 4 * root.u
-            Osd { anchors.right: parent.right; size: 46; text: root.osdTime(root.now) }
-            Osd { anchors.right: parent.right; size: 22; bold: false; ink: root.cText; text: root.osdDate(root.now) }
-        }
+            Column {
+                anchors.right: parent.right
+                spacing: 4 * root.u
+                Osd { anchors.right: parent.right; size: 46; text: root.osdTime(root.now) }
+                Osd { anchors.right: parent.right; size: 22; bold: false; ink: root.cText; text: root.osdDate(root.now) }
+            }
 
-        Row {
-            anchors.left: parent.left; anchors.bottom: parent.bottom
-            spacing: 22 * root.u
-            Osd { size: 22; text: "CNT " + root.tapeCounter(root.counter) }
-            Osd { size: 22; bold: false; ink: root.cDim; glow: root.cCrimDeep; text: "@ " + (sddm.hostName || "localhost").toUpperCase() }
-        }
+            Row {
+                anchors.left: parent.left; anchors.bottom: parent.bottom
+                spacing: 22 * root.u
+                Osd { size: 22; text: "CNT " + root.tapeCounter(root.counter) }
+                Osd { size: 22; bold: false; ink: root.cDim; glow: root.cCrimDeep; text: "@ " + (sddm.hostName || "localhost").toUpperCase() }
+            }
     }
 
     // ---- glass panel ---------------------------------------------------------
@@ -325,7 +322,7 @@ Item {
                 width: 10 * root.u; height: 3 * root.u
                 y: parent.height / 2 + 9 * root.u
                 x: 14 * root.u + (field.secret ? blocks.width + (input.length > 0 ? 4 * root.u : 0)
-                                               : Math.min(input.cursorRectangle.x + 2 * root.u, well.width - 30 * root.u))
+                : Math.min(input.cursorRectangle.x + 2 * root.u, well.width - 30 * root.u))
                 color: root.cCrimGlow
                 SequentialAnimation on opacity {
                     loops: Animation.Infinite
@@ -445,10 +442,10 @@ Item {
                     anchors.verticalCenter: parent.verticalCenter
                     spacing: 10 * root.u
                     Text { text: "◀"; font.family: root.mono; font.pixelSize: 16 * root.u; color: prevArea.containsMouse ? root.cCrimGlow : root.cCrim
-                           MouseArea { id: prevArea; anchors.fill: parent; anchors.margins: -8; hoverEnabled: true; onClicked: root.cycleSession(-1) } }
-                    Text { text: root.sessionLabel.toUpperCase(); font.family: root.mono; font.pixelSize: 15 * root.u; font.letterSpacing: 2 * root.u; color: root.cText }
-                    Text { text: "▶"; font.family: root.mono; font.pixelSize: 16 * root.u; color: nextArea.containsMouse ? root.cCrimGlow : root.cCrim
-                           MouseArea { id: nextArea; anchors.fill: parent; anchors.margins: -8; hoverEnabled: true; onClicked: root.cycleSession(1) } }
+                        MouseArea { id: prevArea; anchors.fill: parent; anchors.margins: -8; hoverEnabled: true; onClicked: root.cycleSession(-1) } }
+                        Text { text: root.sessionLabel.toUpperCase(); font.family: root.mono; font.pixelSize: 15 * root.u; font.letterSpacing: 2 * root.u; color: root.cText }
+                        Text { text: "▶"; font.family: root.mono; font.pixelSize: 16 * root.u; color: nextArea.containsMouse ? root.cCrimGlow : root.cCrim
+                            MouseArea { id: nextArea; anchors.fill: parent; anchors.margins: -8; hoverEnabled: true; onClicked: root.cycleSession(1) } }
                 }
                 Text {
                     anchors.right: parent.right; anchors.verticalCenter: parent.verticalCenter
