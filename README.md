@@ -29,13 +29,9 @@ git clone https://github.com/sheepy1335/tetofeed-sddm
 cd tetofeed-sddm && sudo ./install.sh
 ```
 
-<<<<<<< HEAD
 Or from the KDE Store: System Settings → Colors & Themes → Login Screen (SDDM) → Get New... → Tetofeed SDDM Login Theme,
 - System Settings → Colors & Themes → Login Screen (SDDM) → Install From File...,
 - or extract to `/usr/share/sddm/themes/` and pick **Tetofeed** in System Settings → Colors & Themes → Login Screen (SDDM).
-=======
-Or from the KDE Store: Extract to `/usr/share/sddm/themes/` and pick **Tetofeed** in System Settings → Colors & Themes → Login Screen (SDDM).
->>>>>>> origin/main
 
 ## Configuration
 
@@ -45,11 +41,7 @@ Or from the KDE Store: Extract to `/usr/share/sddm/themes/` and pick **Tetofeed*
 |---|---|---|
 | `background` | `assets/background.png` | any image; the face is kept to the left |
 | `tagline` | `SIGNAL ACQUIRED // IDENTIFY` | line under the panel title |
-<<<<<<< HEAD
 | `channel` | `CH 0401` | OSD channel label |
-=======
-| `channel` | `CH 03` | OSD channel label |
->>>>>>> origin/main
 | `glitches` | `true` | `false` stops the tape tears |
 
 ## The rest of the suite
@@ -58,10 +50,7 @@ Or from the KDE Store: Extract to `/usr/share/sddm/themes/` and pick **Tetofeed*
 |---|---|
 | Plymouth boot splash | [tetofeed-plymouth](https://github.com/sheepy1335/tetofeed-plymouth) |
 | Global theme + splash screen | [tetofeed-global](https://github.com/sheepy1335/tetofeed-global) |
-<<<<<<< HEAD
 | Plasma splash screen | [tetofeed-splash](https://github.com/sheepy1335/tetofeed-splash) |
-=======
->>>>>>> origin/main
 | Plasma style (panel, popups) | [tetofeed-plasma](https://github.com/sheepy1335/tetofeed-plasma) |
 | Aurorae window decoration | [tetofeed-aurorae](https://github.com/sheepy1335/tetofeed-aurorae) |
 | Colour scheme | [tetofeed-colors](https://github.com/sheepy1335/tetofeed-colors) |
@@ -77,11 +66,6 @@ Everything at once, with the generators: [tetofeed](https://github.com/sheepy133
 
 ## Credits and licence
 
-<<<<<<< HEAD
 - By sheepy1335, customised from [Bloodfeed SDDM](https://github.com/numbpill3d/bloodfeed-sddm) by numbpill3d. GPL-3.0-or-later.
 - Wallpaper is from [wallpapers.com](https://wallpapers.com/wallpapers/kasane-teto-digital-art-qtho2b0qil6f2n3q.html)
 - OSD font: Terminess Nerd Font (Terminus, SIL OFL 1.1), bundled with its licence.
-=======
-By sheepy1335. GPL-3.0-or-later.
-OSD font: Terminess Nerd Font (Terminus, SIL OFL 1.1), bundled with its licence.
->>>>>>> origin/main
